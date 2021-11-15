@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 5533196735549717186}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.62, y: 0, z: 0}
-  m_LocalScale: {x: 1.8, y: 0.1, z: 1}
+  m_LocalScale: {x: 1.8, y: 0.23755, z: 1}
   m_Children: []
   m_Father: {fileID: 5102378158901676693}
   m_RootOrder: 0
@@ -194,6 +194,7 @@ GameObject:
   - component: {fileID: 7469268639874401023}
   - component: {fileID: 7469268639874401021}
   - component: {fileID: 7469268639874401020}
+  - component: {fileID: 1818987369250688041}
   m_Layer: 0
   m_Name: Diamond
   m_TagString: diamond
@@ -229,11 +230,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2abc9a946831d4ac99e0090063e93043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  torqueAmount: 1
+  torqueAmount: 0.1
   spline1: {fileID: 7760738326412022205}
   spline2: {fileID: 3030354024067124294}
   minSplineDelta: 0.0001
-  maxSplineDelta: 0.01
+  maxSplineDelta: 0.005
   minSecondsBeforeInitialExtension: 2
   maxSecondsBeforeInitialExtension: 30
   minSecondsBetweenRecurringExtensions: 1
@@ -303,14 +304,14 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 2
+  m_Mass: 0.25
   m_LinearDrag: 0
   m_AngularDrag: 0.5
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!60 &7469268639874401020
 PolygonCollider2D:
@@ -345,6 +346,18 @@ PolygonCollider2D:
       - {x: 0.5, y: -0.02734375}
       - {x: 0.5, y: 0.015625}
       - {x: 0.0703125, y: 0.25}
+--- !u!114 &1818987369250688041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7469268639874401008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ca85ad59b9e4cd48b7e5583ab4a4c83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8431328071613996231
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,7 +417,7 @@ Transform:
   m_GameObject: {fileID: 8610455912245763548}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.62, y: 0, z: 0}
-  m_LocalScale: {x: 1.8, y: 0.1, z: 1}
+  m_LocalScale: {x: 1.8, y: 0.20254, z: 1}
   m_Children: []
   m_Father: {fileID: 8930945543030740532}
   m_RootOrder: 0

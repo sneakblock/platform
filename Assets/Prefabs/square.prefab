@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3596611187026997773}
   - component: {fileID: 3596611187026997770}
   - component: {fileID: 3596611187026997775}
+  - component: {fileID: -6485812868753608053}
   m_Layer: 0
   m_Name: square
   m_TagString: square
@@ -48,13 +49,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StandardColor: {r: 0, g: 0, b: 0, a: 1}
   ToColor: {r: 1, g: 0, b: 0.10218954, a: 1}
-  attractForce: 0.5
+  attractForce: 1
   minPullFuse: 1
   maxPullFuse: 60
   minPullRate: 5
   maxPullRate: 60
   pullDuration: 2
   riseRate: 0.001
+  isPushing: 0
 --- !u!212 &3596611187026997773
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -125,7 +127,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!61 &3596611187026997775
 BoxCollider2D:
@@ -153,3 +155,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-6485812868753608053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3596611187026997771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ca85ad59b9e4cd48b7e5583ab4a4c83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -240,7 +240,7 @@ MonoBehaviour:
   Square: {fileID: 3596611187026997771, guid: 431a6431d29994969949d5dd8cb35667, type: 3}
   Circle: {fileID: 3382568355842033606, guid: a4a8ec32ffea44a2c8e2ed7957ce2e89, type: 3}
   Diamond: {fileID: 7469268639874401008, guid: a7ad25ca59ad04e0fb2f6f4838a5d0ad, type: 3}
-  minPerShapeSpawnRange: 3
+  minPerShapeSpawnRange: 15
   maxPerShapeSpawnRange: 20
   rectWidthAndHeight: 30
   rectSource: {fileID: 1992029325}
@@ -265,13 +265,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3471695675464805422, guid: de5f9b01ea21b4adca09d39d309b2d9b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.496
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297870589203547349, guid: de5f9b01ea21b4adca09d39d309b2d9b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4575358853909052962, guid: de5f9b01ea21b4adca09d39d309b2d9b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.496
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631305999707632394, guid: de5f9b01ea21b4adca09d39d309b2d9b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8036311010689891082, guid: de5f9b01ea21b4adca09d39d309b2d9b, type: 3}
       propertyPath: m_Name
       value: platform
       objectReference: {fileID: 0}
     - target: {fileID: 8756309089489992168, guid: de5f9b01ea21b4adca09d39d309b2d9b, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8756309089489992168, guid: de5f9b01ea21b4adca09d39d309b2d9b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 16.056074
       objectReference: {fileID: 0}
     - target: {fileID: 8756309089489992168, guid: de5f9b01ea21b4adca09d39d309b2d9b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -358,7 +378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb0ba24417314bd5ad98e1cb345fee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cage: {fileID: 0}
+  mouseSens: 0.25
 --- !u!1 &1646321178
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,7 +408,7 @@ Transform:
   m_LocalScale: {x: 3.213429, y: 3.213429, z: 3.213429}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1646321180
 MonoBehaviour:

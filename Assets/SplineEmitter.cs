@@ -41,7 +41,7 @@ public class SplineEmitter : MonoBehaviour
     {
         spline1.Extend(splineDelta);
         spline2.Extend(splineDelta);
-        Debug.Log("Extending with " + splineDelta + "splineDelta.");
+        //Debug.Log("Extending with " + splineDelta + "splineDelta.");
     }
 
 }

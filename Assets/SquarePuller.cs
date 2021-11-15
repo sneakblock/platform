@@ -35,6 +35,8 @@ public class SquarePuller : MonoBehaviour
     private float pullRate;
     private Vector3 riseRateVector3;
 
+    public bool isPushing = false;
+
 
 
     // Start is called before the first frame update
@@ -49,7 +51,7 @@ public class SquarePuller : MonoBehaviour
 
     void PullSquares()
     {
-        Debug.Log("Pulling squares.");
+        //Debug.Log("Pulling squares.");
         otherSquares = GameObject.FindGameObjectsWithTag("square");
         StartCoroutine(Puller());
         StartCoroutine(ColorChange());
@@ -58,18 +60,22 @@ public class SquarePuller : MonoBehaviour
 
     IEnumerator Puller()
     {
-
+        isPushing = true;
         float timer = 0;
         while (timer < pullDuration)
         {
             transform.position += riseRateVector3;
             for (int i = 0; i < otherSquares.Length; i++)
             {
-                otherSquares[i].GetComponent<Rigidbody2D>().AddForce((transform.position - otherSquares[i].transform.position) * attractForce);
+                if (otherSquares[i] != null && !otherSquares[i].GetComponent<SquarePuller>().isPushing)
+                {
+                    otherSquares[i].GetComponent<Rigidbody2D>().AddForce((transform.position - otherSquares[i].transform.position).normalized * attractForce);
+                }
             }
             timer += Time.deltaTime;
             yield return null;
         }
+        isPushing = false;
         
     }
 
@@ -83,6 +89,7 @@ public class SquarePuller : MonoBehaviour
     IEnumerator Kinematicer()
     {
         GetComponent<Rigidbody2D>().isKinematic = true;
+        GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         yield return new WaitForSeconds(pullDuration);
         GetComponent<Rigidbody2D>().isKinematic = false;
     }

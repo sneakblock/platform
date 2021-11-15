@@ -6,6 +6,7 @@ TagManager:
   tags:
   - square
   - diamond
+  - circle
   layers:
   - Default
   - TransparentFX
